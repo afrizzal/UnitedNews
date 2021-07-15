@@ -15,7 +15,6 @@
 		1B3F87BF269D7760008D5357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B3F87BE269D7760008D5357 /* Assets.xcassets */; };
 		1B3F87C2269D7760008D5357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B3F87C0269D7760008D5357 /* LaunchScreen.storyboard */; };
 		1B3F87CA269D7BC5008D5357 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F87C9269D7BC5008D5357 /* APICaller.swift */; };
-		1B3F87CC269DB42E008D5357 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F87CB269DB42E008D5357 /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		1B3F87C1269D7760008D5357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B3F87C3269D7760008D5357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B3F87C9269D7BC5008D5357 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		1B3F87CB269DB42E008D5357 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				1B3F87B2269D775F008D5357 /* AppDelegate.swift */,
 				1B3F87B4269D775F008D5357 /* SceneDelegate.swift */,
 				1B3F87B6269D775F008D5357 /* ViewController.swift */,
-				1B3F87CB269DB42E008D5357 /* NewsTableViewCell.swift */,
 				1B3F87B8269D775F008D5357 /* Main.storyboard */,
 				1B3F87BE269D7760008D5357 /* Assets.xcassets */,
 				1B3F87C0269D7760008D5357 /* LaunchScreen.storyboard */,
@@ -148,7 +145,6 @@
 			files = (
 				1B3F87B7269D775F008D5357 /* ViewController.swift in Sources */,
 				1B3F87BD269D775F008D5357 /* UnitedNews.xcdatamodeld in Sources */,
-				1B3F87CC269DB42E008D5357 /* NewsTableViewCell.swift in Sources */,
 				1B3F87B3269D775F008D5357 /* AppDelegate.swift in Sources */,
 				1B3F87CA269D7BC5008D5357 /* APICaller.swift in Sources */,
 				1B3F87B5269D775F008D5357 /* SceneDelegate.swift in Sources */,

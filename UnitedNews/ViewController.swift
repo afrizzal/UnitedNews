@@ -45,10 +45,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.frame = view.bounds
     }
     //Table
-    func tableView(_ tableView: UITableView, NumberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
-    func tableView (_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITbaleViewCell {
+    private func tableView (_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "cell",
             for: IndexPath
