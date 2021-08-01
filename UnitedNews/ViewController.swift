@@ -18,9 +18,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self,
-                       forCellReuseIdentifier: "cell")
+                       forCellReuseIdentifier: NewsTableViewCellViewModel.identifier)
         return table
     }()
+    
+    private var viewModels = [NewsTableViewCellViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +34,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         APICaller.shared.getTopStories {result in
         switch result {
-        case .success(let response):
-            break
+        case .success(let articles):
+            self?.viewModels = articles.compactMap ({
+                NewsTableViewCellViewModel(title: $0.title,
+                                           subtitle: $0.description ?? "No Description"
+                                           imageURL: URL(string: $0.urlToImage ?? "")
+                )
+            })
         case .failure(let error):
             print(error)
             }
@@ -49,11 +56,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 0
     }
     private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: "cell",
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: NewsTableViewCellViewModel.identifier,
             for: IndexPath
-        )
-        cell.textLabel?.text = "Something"
+        )as? NewsTableViewCell else {
+            fatalError()
+        }
+        cell.configure(with: viewModels[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
